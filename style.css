@@ -5,6 +5,15 @@
     --pure-white: rgb(255, 255, 255);
     --opacity: 0.7;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 html {
     scroll-behavior: smooth;
 }
