@@ -1,3 +1,3 @@
 # MyPortfolio - Web project
 
-## A simple static web page that showcase my skills and expertise.
+## A simple static web page to showcase my skills and expertise.
