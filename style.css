@@ -405,12 +405,18 @@ body {
         flex-direction: column;
         justify-content: space-evenly;
     }
+    .nav-bar {
+        flex: 1;
+    }
     .nav-bar > ul {
         flex-wrap: wrap;
         justify-content: center;
     }
     .nav-bar > ul > li {
         margin: 0;
+    }
+    .fixed-nav {
+        padding: 10px 0;
     }
     .fixed-nav > ul {
         margin: 0 !important;
