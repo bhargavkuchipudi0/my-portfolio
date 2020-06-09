@@ -48,3 +48,19 @@ function isSectionInView(el) {
 	
 	return (bounds.top <= (viewport.top+viewport.bottom)/2) && (bounds.bottom >= ((viewport.top+viewport.bottom)/2));
 }
+
+function copyText() {
+    var a = document.createElement("input");
+    a.setAttribute("id", "gmail");
+    a.setAttribute("value", "bhargavkuchipudi0@gmail.com");
+
+    var cont = document.getElementsByClassName('cont-left');
+    cont[0].appendChild(a);
+
+    var b = document.querySelector("#gmail");
+    b.select();
+    
+    document.execCommand('copy');
+    window.alert('Email Copied to Clipboard!');
+    a.remove();
+}
