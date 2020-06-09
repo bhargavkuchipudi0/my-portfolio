@@ -1,4 +1,4 @@
-const staticDeveProtfolio = "my-portfolio-v1"
+const staticDeveProtfolio = "my-portfolio-v1.1"
 
 const assets = [
     "/",
