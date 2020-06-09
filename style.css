@@ -323,7 +323,7 @@ body {
     grid-gap: 20px 20px;
 }
 .art {
-    max-height: 500px;
+    max-height: 600px;
     border-radius: 5px;
     border: 1px solid var(--pale-white);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
