@@ -38,9 +38,9 @@ const assets = [
 ]
 
 self.addEventListener('install', installevent => {
-    installevent.waitUntill(
+    installevent.waitUntil(
         caches.open(staticDeveProtfolio).then(cache => {
-            Cache.addAll(assets);
+            cache.addAll(assets);
         })
     )
 })
