@@ -149,7 +149,8 @@ body {
 }
 
 .nav-bar li {
-    padding: .5em 1em;
+    min-width: 90px;  
+    height: 35px;  
     display: flex;
     justify-content: center;
     align-items: center;

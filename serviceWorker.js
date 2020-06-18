@@ -1,4 +1,4 @@
-const staticDeveProtfolio = "my-portfolio-v1.2.1"
+const staticDeveProtfolio = "my-portfolio-v1.2.5"
 
 const assets = [
     "/",
@@ -49,6 +49,27 @@ self.addEventListener('fetch', fetchEvent => {
     fetchEvent.respondWith(
         caches.match(fetchEvent.request).then(res => {
             return res || fetch(fetchEvent.request);
+        })
+    )
+})
+
+self.addEventListener('activate', function(activateEvent) {
+    console.log("WORKER: Activate event in progress..");
+
+    activateEvent.waitUntil(
+        caches.keys().then(function(keys) {
+            return Promise.all(
+                keys
+                .filter(function(key) {
+                    return key !== staticDeveProtfolio;
+                })
+                .map(function(key) {
+                    return caches.delete(key);
+                })
+            )
+        })
+        .then(function() {
+            console.log('WORKER: activate completed.');
         })
     )
 })
