@@ -53,23 +53,23 @@ self.addEventListener('fetch', fetchEvent => {
     )
 })
 
-self.addEventListener('activate', function(activateEvent) {
-    console.log("WORKER: Activate event in progress..");
+// self.addEventListener('activate', function(activateEvent) {
+//     console.log("WORKER: Activate event in progress..");
 
-    activateEvent.waitUntil(
-        caches.keys().then(function(keys) {
-            return Promise.all(
-                keys
-                .filter(function(key) {
-                    return key !== staticDeveProtfolio;
-                })
-                .map(function(key) {
-                    return caches.delete(key);
-                })
-            )
-        })
-        .then(function() {
-            console.log('WORKER: activate completed.');
-        })
-    )
-})
+//     activateEvent.waitUntil(
+//         caches.keys().then(function(keys) {
+//             return Promise.all(
+//                 keys
+//                 .filter(function(key) {
+//                     return key !== staticDeveProtfolio;
+//                 })
+//                 .map(function(key) {
+//                     return caches.delete(key);
+//                 })
+//             )
+//         })
+//         .then(function() {
+//             console.log('WORKER: activate completed.');
+//         })
+//     )
+// })
