@@ -1,4 +1,4 @@
-const staticDeveProtfolio = "my-portfolio-v1.2.5"
+const staticDeveProtfolio = "my-portfolio-v1.2.8"
 
 const assets = [
     "/",
@@ -53,7 +53,9 @@ self.addEventListener('fetch', fetchEvent => {
     )
 })
 
-self.addEventListener('activate', function(activateEvent) {
+
+self.addEventListener('activate', (activateEvent) => {
+    console.log('in activate')
     console.log("WORKER: Activate event in progress..");
 
     activateEvent.waitUntil(
@@ -69,7 +71,7 @@ self.addEventListener('activate', function(activateEvent) {
             )
         })
         .then(function() {
-            console.log('WORKER: activate completed.');
+            console.log('WORKER: Activate completed.');
         })
     )
 })
